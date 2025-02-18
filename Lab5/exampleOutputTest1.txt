@@ -1,0 +1,25 @@
+Visitor Annual Permit for Motorcycle
+
+CUSTOMER
+Visitor
+Full Name: John Doe
+Address: 123 Real St
+Email Address: jdoe@clemson.edu
+Distance from Campus: 40 miles
+Phone Number: (555)555-5555
+
+Vehicle
+Motorcycle
+Manufacturer: Rand Car Brand
+Model Number: Rand Car Model
+Model Year: 2021
+Engine Size: 450 cc
+Vehicle Color: Black
+
+BILL
+Permit Type: Annual
+Permit Cost: $60.00
+Discounts: $0.00
+Service Charge: $0.00
+Total: $60.00
+
