@@ -2,13 +2,11 @@
 John Doe
 123 Real St
 jdoe@clemson.edu
-40 miles
 (555)555-5555
+18
 1
 Rand Car Brand
 Rand Car Model
 2021
-450 cc
+450
 Black
-1
-

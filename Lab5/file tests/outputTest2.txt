@@ -1,0 +1,20 @@
+BILL
+Permit Type: Annual
+Permit Cost: $75.00
+Discounts: $0.00
+Service Charge: $15.00
+Total: $90.00
+CUSTOMER
+Facility
+Full Name: Professor K
+Address: 2118 Weber Drive
+Email: jkel@clemson.edu
+Phone Number: (843)584-9823
+Distance from Campus: 10 Miles
+VEHICLE
+Car
+Manufacturer: Honda
+Model Number: Honda Civic
+Model Year: 2024
+Engine Size: 450 cc
+Vehicle Color: Blue

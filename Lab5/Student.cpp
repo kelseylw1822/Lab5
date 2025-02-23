@@ -20,9 +20,9 @@ void Student::setPhone(string number)
     phone = number;
 }
 
-void Student::setMilesFromCampus(int miles)
+void Student::setAge(string years)
 {
-    milesFromCampus = miles;
+    age = years;
 }
 
 string Student::getName()
@@ -45,8 +45,8 @@ string Student::getPhone()
     return phone;
 }
 
-int Student::getMilesFromCampus()
+string Student::getAge()
 {
-    return milesFromCampus;
+    return age;
 }
 

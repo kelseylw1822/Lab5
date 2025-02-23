@@ -1,0 +1,20 @@
+BILL
+Permit Type: Annual
+Permit Cost: $75.00
+Discounts: $25.00
+Service Charge: $15.00
+Total: $65.00
+CUSTOMER
+Student
+Full Name: John Doe
+Address: 123 Real St
+Email: jdoe@clemson.edu
+Phone Number: (555)555-5555
+Age: 18 Years Old
+VEHICLE
+Car
+Manufacturer: Rand Car Brand
+Model Number: Rand Car Model
+Model Year: 2021
+Engine Size: 450 cc
+Vehicle Color: Black

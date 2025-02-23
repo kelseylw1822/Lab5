@@ -20,7 +20,7 @@ void Facility::setPhone(string number)
     phone = number;
 }
 
-void Facility::setMilesFromCampus(int miles)
+void Facility::setMilesFromCampus(string miles)
 {
     milesFromCampus = miles;
 }
@@ -45,7 +45,7 @@ string Facility::getPhone()
     return phone;
 }
 
-int Facility::getMilesFromCampus()
+string Facility::getMilesFromCampus()
 {
     return milesFromCampus;
 }

@@ -1,0 +1,21 @@
+BILL
+Permit Type: Annual
+Permit Cost: $75.00
+Discounts: $25.00
+Service Charge: $0.00
+Total: $50.00
+CUSTOMER
+Student
+Full Name: Dave Reed
+Address: 502 Rain Street
+Email: dree@clemson.edu
+Phone Number: (943)764-0923
+Age: 20 Years Old
+VEHICLE
+Motorcycle
+Manufacturer: Harley-Davidson
+Model Number: Road Glide Limited
+Model Year: 2010
+Engine Size: 737
+Vehicle Color: Red
+

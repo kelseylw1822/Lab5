@@ -1,18 +1,18 @@
 #include "Car.h"
 
-void Car::setManufactuer(string make)
+void Car::setManufacturer(string make)
 {
-    manufactuer = make;
+    manufacturer = make;
 }
 void Car::setModel(string theModel)
 {
     model = theModel;
 }
-void Car::setYear(int yearMade)
+void Car::setYear(string yearMade)
 {
     year = yearMade;
 }
-void Car::setEngineSize(int size)
+void Car::setEngineSize(string size)
 {
     engineSize = size;
 }
@@ -20,19 +20,19 @@ void Car::setColor(string theColor)
 {
     color = theColor;
 }
-string Car::getManufactuer()
+string Car::getManufacturer()
 {
-    return manufactuer;
+    return manufacturer;
 }
 string Car::getModel()
 {
     return model;
 }
-int Car::getYear()
+string Car::getYear()
 {
     return year;
 }
-int Car::getEngineSize()
+string Car::getEngineSize()
 {
     return engineSize;
 }

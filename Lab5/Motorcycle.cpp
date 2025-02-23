@@ -1,18 +1,18 @@
 #include "Motorcycle.h"
 
-void Motorcycle::setManufactuer(string make)
+void Motorcycle::setManufacturer(string make)
 {
-    manufactuer = make;
+    manufacturer = make;
 }
 void Motorcycle::setModel(string theModel)
 {
     model = theModel;
 }
-void Motorcycle::setYear(int yearMade)
+void Motorcycle::setYear(string yearMade)
 {
     year = yearMade;
 }
-void Motorcycle::setEngineSize(int size)
+void Motorcycle::setEngineSize(string size)
 {
     engineSize = size;
 }
@@ -20,19 +20,19 @@ void Motorcycle::setColor(string theColor)
 {
     color = theColor;
 }
-string Motorcycle::getManufactuer()
+string Motorcycle::getManufacturer()
 {
-    return manufactuer;
+    return manufacturer;
 }
 string Motorcycle::getModel()
 {
     return model;
 }
-int Motorcycle::getYear()
+string Motorcycle::getYear()
 {
     return year;
 }
-int Motorcycle::getEngineSize()
+string Motorcycle::getEngineSize()
 {
     return engineSize;
 }

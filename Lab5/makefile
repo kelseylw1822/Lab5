@@ -1,6 +1,6 @@
 COMPILER = g++
 OPTIONS = -Wall
-PROGRAM = permit.out
+PROGRAM = main.out
 
 all : $(PROGRAM)
 

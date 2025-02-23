@@ -3,10 +3,13 @@
 
 #include <iostream>
 #include <iomanip>
+#include <fstream>
+#include <string>
 #include "Student.h"
 #include "Facility.h"
 #include "Car.h"
 #include "Motorcycle.h"
+
 using namespace std;
 
 class Invoice
@@ -24,11 +27,11 @@ public:
     double getDiscount();
     double getServiceCharges();
     double totalCost();
-    void showInvoice();
-    void showInvoice(Student& student);
-    void showInvoice(Facility& facility);
-    void showInvoice(Car& car);
-    void showInvoice(Motorcycle& motorcyles);
+    void showInvoice(ofstream& outFile);
+    void showInvoice(Student& student, ofstream& outFile);
+    void showInvoice(Facility& facility, ofstream& outFile);
+    void showInvoice(Car& car, ofstream& outFile);
+    void showInvoice(Motorcycle& motorcycle, ofstream& outFile);
 };
 
 #endif 

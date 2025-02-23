@@ -11,20 +11,20 @@ private:
     string address;
     string email;
     string phone;
-    int milesFromCampus;
+    string age;
 public:
-    Student() : name(""), address(""), email(""), phone(""), milesFromCampus(0) {} ;
-    Student(string n, string add, string em, string number, int miles)  : name(n), address(add), email(em), phone(number), milesFromCampus(miles) {} ;
+    Student() : name(""), address(""), email(""), phone(""), age("") {} ;
+    Student(string n, string add, string em, string number, string theAge)  : name(n), address(add), email(em), phone(number), age(theAge) {} ;
     void setName(string studentName);
     void setAddress(string add);
     void setEmail(string mail);
     void setPhone(string number);
-    void setMilesFromCampus(int miles);
+    void setAge(string years);
     string getName();
     string getAddress();
     string getEmail();
     string getPhone();
-    int getMilesFromCampus();
+    string getAge();
 };
 
 #endif

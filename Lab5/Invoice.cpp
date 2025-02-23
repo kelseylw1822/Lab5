@@ -30,50 +30,52 @@ double Invoice::totalCost()
     return  price - discount + serviceCharge;
 }
 
-void Invoice::showInvoice()
-{
-    cout << "BILL" << endl;
-    cout << "Permit Type: Annual" << endl;
-    cout << "Permit Cost: $" << fixed << setprecision(2) << price << endl;
-    cout << "Discounts: $" << fixed << setprecision(2) << discount << endl;
-    cout << "Service Charge: $" << fixed << setprecision(2) << serviceCharge << endl;
-    cout << "Total: $" << fixed << setprecision(2) << getPrice() << endl ;
+// Show the invoice (general format for invoice)
+void Invoice::showInvoice(ofstream& outFile) {
+    outFile << "BILL" << endl;
+    outFile << "Permit Type: Annual" << endl;
+    outFile << "Permit Cost: $" << fixed << setprecision(2) << price << endl;
+    outFile << "Discounts: $" << fixed << setprecision(2) << discount << endl;
+    outFile << "Service Charge: $" << fixed << setprecision(2) << serviceCharge << endl;
+    outFile << "Total: $" << fixed << setprecision(2) << getPrice() << endl ;
 }
 
-void Invoice::showInvoice(Student& student)
-{
-    cout << "CUSTOMER" << endl << "Student" << endl;
-    cout << "Full Name: " << student.getName() << endl;
-    cout << "Adress: " << student.getAddress() << endl;
-    cout << "Email: " << student.getEmail() << endl;
-    cout << "Phone Number: " << student.getPhone() << endl;
-    cout << "Distance from Campus: " << student.getMilesFromCampus() << " Miles" << endl;
-}
-void Invoice::showInvoice(Facility& facility)
-{
-    cout << "CUSTOMER" << endl << "Facility" << endl;
-    cout << "Full Name: " << facility.getName() << endl;
-    cout << "Adress: " << facility.getAddress() << endl;
-    cout << "Email: " << facility.getEmail() << endl;
-    cout << "Phone Number: " << facility.getPhone() << endl;
-    cout << "Distance from Campus: " << facility.getMilesFromCampus() << " Miles" << endl;
-}
-void Invoice::showInvoice(Car& car)
-{
-    cout << "VEHICLE" << endl << "Car" << endl;
-    cout << "Manufacturer: " << car.getManufactuer() << endl;
-    cout << "Modedl Number: " << car.getModel() << endl;
-    cout << "Model Year: " << car.getYear() << endl;
-    cout << "Engine Size: " << car.getEngineSize() << endl;
-    cout << "Vehicle Color: " << car.getColor() << endl;
-}
-void Invoice::showInvoice(Motorcycle& motorcyles)
-{
-    cout << "VEHICLE" << endl << "Motorcyle" << endl;
-    cout << "Manufacturer: " << motorcyles.getManufactuer() << endl;
-    cout << "Modedl Number: " << motorcyles.getModel() << endl;
-    cout << "Model Year: " << motorcyles.getYear() << endl;
-    cout << "Engine Size: " << motorcyles.getEngineSize() << endl;
-    cout << "Vehicle Color: " << motorcyles.getColor() << endl;
+// Show the invoice for a student
+void Invoice::showInvoice(Student& student, ofstream& outFile) {
+    outFile << "CUSTOMER" << endl << "Student" << endl;
+    outFile << "Full Name: " << student.getName() << endl;
+    outFile << "Address: " << student.getAddress() << endl;
+    outFile << "Email: " << student.getEmail() << endl;
+    outFile << "Phone Number: " << student.getPhone() << endl;
+    outFile << "Age: " << student.getAge() << endl;
 }
 
+// Show the invoice for a facility
+void Invoice::showInvoice(Facility& facility, ofstream& outFile) {
+    outFile << "CUSTOMER" << endl << "Facility" << endl;
+    outFile << "Full Name: " << facility.getName() << endl;
+    outFile << "Address: " << facility.getAddress() << endl;
+    outFile << "Email: " << facility.getEmail() << endl;
+    outFile << "Phone Number: " << facility.getPhone() << endl;
+    outFile << "Distance from Campus: " << facility.getMilesFromCampus() << " Miles" << endl;
+}
+
+// Show the invoice for a car
+void Invoice::showInvoice(Car& car, ofstream& outFile) {
+    outFile << "VEHICLE" << endl << "Car" << endl;
+    outFile << "Manufacturer: " << car.getManufacturer() << endl;
+    outFile << "Model Number: " << car.getModel() << endl;
+    outFile << "Model Year: " << car.getYear() << endl;
+    outFile << "Engine Size: " << car.getEngineSize() << endl;
+    outFile << "Vehicle Color: " << car.getColor() << endl;
+}
+
+// Show the invoice for a motorcycle
+void Invoice::showInvoice(Motorcycle& motorcycle, ofstream& outFile) {
+    outFile << "VEHICLE" << endl << "Motorcyle" << endl;
+    outFile << "Manufacturer: " << motorcycle.getManufacturer() << endl;
+    outFile << "Model Number: " << motorcycle.getModel() << endl;
+    outFile << "Model Year: " << motorcycle.getYear() << endl;
+    outFile << "Engine Size: " << motorcycle.getEngineSize() << endl;
+    outFile << "Vehicle Color: " << motorcycle.getColor() << endl;
+}

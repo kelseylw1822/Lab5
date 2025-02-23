@@ -1,122 +1,93 @@
 #include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <string>
+#include <vector>
+
 #include "Facility.h"
 #include "Student.h"
 #include "Car.h"
 #include "Motorcycle.h"
 #include "Invoice.h"
+
 using namespace std;
 
 int main()
 {
-    int customer;
-    int vehicle;
-    
-    // customer variables
-    string name;
-    string address;
-    string email;
-    string phone;
-    int distance;
-    
-    // vehicle variables
-    string manufactuer;
-    string model;
-    int year;
-    int engineSize;
-    string color;
-    
-    // invoice object
-    Invoice invoice;
-    
-    // figure out what type of customer they are
-    cout << "Enter 1 if you are a student or 2 if you are facility: " ;
-    cin >> customer;
-    cin.ignore();
-    
-    // get data about customer
-    cout << "Enter your name: " ;
-    getline(cin, name);
-    cout << "Enter your address: " ;
-    getline(cin, address);
-    cout << "Enter your email: " ;
-    getline(cin, email);
-    cout << "Enter your phone number: ";
-    getline(cin, phone);
-    cout << "How many miles are you from campus: " ;
-    cin >> distance;
-    cin.ignore();
-    
-    Student* student = nullptr;
-    Facility* facility = nullptr;
-    
-    if (customer == 1)
-    {
-        // declare student object
-        student = new Student(name, address, email, phone, distance);
-        invoice.setDiscount(25);
-    }
-    else
-    {
-        // declare facility object
-        facility = new Facility(name, address, email, phone, distance);;
-    }
-    
-    // figure out what type of vehicle they have
-    cout << endl << "Enter 1 if you have a car or 2 if you have a motorcycle: " ;
-    cin >> vehicle;
-    cin.ignore();
+    ifstream inFile("inputTest1.txt"); // start input stream
+    ofstream outFile("output.txt"); // start output stream
+        
+    vector<string> input;
+    string line;
 
-    // get data about vehicle
-    cout << "Enter your vehicles manufactuer: " ;
-    getline(cin, manufactuer);
-    cout << "Enter your vehicles model: " ;
-    getline(cin, model);
-    cout << "Enter the year your vehicle was made: " ;
-    cin >> year;
-    cout << "Enter your vehicles engine size: " ;
-    cin >> engineSize;
-    cin.ignore();
-    cout << "Enter your vehicles color: ";
-    getline(cin, color);
-    cout << endl;
-    
-    Car* car = nullptr;
-    Motorcycle* motorcycle = nullptr;
-    
-    if (vehicle == 1)
+    while (getline(inFile, line))
     {
-        // declare car object
-        car = new Car(manufactuer, model, year, engineSize, color);
-        invoice.setServiceCharges(15);
-        invoice.setPrice(75);
-    }
-    else
-    {
-        // declare motorcycle object
-        motorcycle = new Motorcycle(manufactuer, model, year, engineSize, color);
-        invoice.setServiceCharges(15);
-        invoice.setPrice(50);
+        input.push_back(line);
     }
     
-    invoice.showInvoice();
-    
-    if (customer == 1)
-        invoice.showInvoice(*student);
-    else
-        invoice.showInvoice(*facility);
-    
-    cout << endl;
-    
-    if(vehicle == 1)
-        invoice.showInvoice(*car);
-    else
-        invoice.showInvoice(*motorcycle);
-    
-    delete student;
-    delete facility;
-    delete car;
-    delete motorcycle;
-    
-    return 0;
+    if (input[0] == "1")  // customer is a student
+        {
+            // Create the student object using input data
+            Student student(input[1], input[2], input[3], input[4], input[5]);
+
+            // Create a new Invoice for the student
+            Invoice invoice;
+            invoice.setPrice(75);
+            invoice.setDiscount(25);  // Set the discount for students
+            invoice.setServiceCharges(15);  // Set service charges
+
+            if (input[6] == "1")  // vehicle is a car
+            {
+                // Create the car object using input data
+                Car car(input[7], input[8], input[9], input[10], input[11]);
+
+                // Show the invoice details for the student and car
+                invoice.showInvoice(outFile);
+                invoice.showInvoice(student, outFile);
+                invoice.showInvoice(car, outFile);
+            }
+            else  // vehicle is a motorcycle
+            {
+                Motorcycle motorcycle(input[7], input[8], input[9], input[10], input[11]);
+
+                // Show the invoice details for the student and motorcycle
+                invoice.showInvoice(outFile);
+                invoice.showInvoice(student, outFile);
+                invoice.showInvoice(motorcycle, outFile);
+            }
+        }
+        else  // customer is a facility
+        {
+            // Create the facility object using input data
+            Facility facility(input[1], input[2], input[3], input[4], input[5]);
+
+            // Create a new Invoice for the facility
+            Invoice invoice;
+            invoice.setPrice(75);  // Set the base price
+            invoice.setServiceCharges(15);  // Set service charges
+
+            if (input[6] == "1")  // vehicle is a car
+            {
+                Car car(input[7], input[8], input[9], input[10], input[11]);
+
+                // Show the invoice details for the facility and car
+                invoice.showInvoice(outFile);
+                invoice.showInvoice(facility, outFile);
+                invoice.showInvoice(car, outFile);
+            }
+            else  // vehicle is a motorcycle
+            {
+                Motorcycle motorcycle(input[7], input[8], input[9], input[10], input[11]);
+
+                // Show the invoice details for the facility and motorcycle
+                invoice.showInvoice(outFile);
+                invoice.showInvoice(facility, outFile);
+                invoice.showInvoice(motorcycle, outFile);
+            }
+        }
+        
+        inFile.close();
+        outFile.close();
+        
+        return 0;
 }
-
