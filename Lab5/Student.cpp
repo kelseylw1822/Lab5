@@ -1,3 +1,5 @@
+// kelsey
+
 #include "Student.h"
 
 void Student::setName(string studentName)

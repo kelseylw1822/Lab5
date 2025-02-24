@@ -1,3 +1,8 @@
+// Name: Kelsey Wessel and Matthew Garino
+// My Class: CPSC 1021
+// Date: 02/23/2025
+// Desc: ractice object-oriented analysis and design and to write an object-based program. 
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -15,7 +20,7 @@ using namespace std;
 int main()
 {
     ifstream inFile("inputTest1.txt"); // start input stream
-    ofstream outFile("output.txt"); // start output stream
+    ofstream outFile("outputTest1.txt"); // start output stream
         
     vector<string> input;
     string line;
