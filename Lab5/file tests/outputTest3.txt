@@ -16,6 +16,6 @@ Motorcycle
 Manufacturer: Harley-Davidson
 Model Number: Road Glide Limited
 Model Year: 2010
-Engine Size: 737
+Engine Size: 737 cc
 Vehicle Color: Red
 

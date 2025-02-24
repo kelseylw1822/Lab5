@@ -72,7 +72,7 @@ void Invoice::showInvoice(Car& car) {
 
 // Show the invoice for a motorcycle
 void Invoice::showInvoice(Motorcycle& motorcycle) {
-    cout << "VEHICLE" << endl << "Motorcyle" << endl;
+    cout << "VEHICLE" << endl << "Motorcycle" << endl;
     cout << "Manufacturer: " << motorcycle.getManufacturer() << endl;
     cout << "Model Number: " << motorcycle.getModel() << endl;
     cout << "Model Year: " << motorcycle.getYear() << endl;
