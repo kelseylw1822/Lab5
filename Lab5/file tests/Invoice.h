@@ -27,11 +27,11 @@ public:
     double getDiscount();
     double getServiceCharges();
     double totalCost();
-    void showInvoice();
-    void showInvoice(Student& student);
-    void showInvoice(Facility& facility);
-    void showInvoice(Car& car);
-    void showInvoice(Motorcycle& motorcycle);
+    void showInvoice(ofstream& outFile);
+    void showInvoice(Student& student, ofstream& outFile);
+    void showInvoice(Facility& facility, ofstream& outFile);
+    void showInvoice(Car& car, ofstream& outFile);
+    void showInvoice(Motorcycle& motorcycle, ofstream& outFile);
 };
 
 #endif 

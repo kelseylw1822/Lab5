@@ -4,8 +4,6 @@
 // Desc: ractice object-oriented analysis and design and to write an object-based program. 
 
 #include <iostream>
-#include <fstream>
-#include <iomanip>
 #include <string>
 #include <vector>
 
@@ -19,13 +17,10 @@ using namespace std;
 
 int main()
 {
-    ifstream inFile("inputTest1.txt"); // start input stream
-    ofstream outFile("outputTest1.txt"); // start output stream
-        
     vector<string> input;
     string line;
 
-    while (getline(inFile, line))
+    while (getline(cin, line))
     {
         input.push_back(line);
     }
@@ -47,18 +42,18 @@ int main()
                 Car car(input[7], input[8], input[9], input[10], input[11]);
 
                 // Show the invoice details for the student and car
-                invoice.showInvoice(outFile);
-                invoice.showInvoice(student, outFile);
-                invoice.showInvoice(car, outFile);
+                invoice.showInvoice();
+                invoice.showInvoice(student);
+                invoice.showInvoice(car);
             }
             else  // vehicle is a motorcycle
             {
                 Motorcycle motorcycle(input[7], input[8], input[9], input[10], input[11]);
 
                 // Show the invoice details for the student and motorcycle
-                invoice.showInvoice(outFile);
-                invoice.showInvoice(student, outFile);
-                invoice.showInvoice(motorcycle, outFile);
+                invoice.showInvoice();
+                invoice.showInvoice(student);
+                invoice.showInvoice(motorcycle);
             }
         }
         else  // customer is a facility
@@ -76,23 +71,20 @@ int main()
                 Car car(input[7], input[8], input[9], input[10], input[11]);
 
                 // Show the invoice details for the facility and car
-                invoice.showInvoice(outFile);
-                invoice.showInvoice(facility, outFile);
-                invoice.showInvoice(car, outFile);
+                invoice.showInvoice();
+                invoice.showInvoice(facility);
+                invoice.showInvoice(car);
             }
             else  // vehicle is a motorcycle
             {
                 Motorcycle motorcycle(input[7], input[8], input[9], input[10], input[11]);
 
                 // Show the invoice details for the facility and motorcycle
-                invoice.showInvoice(outFile);
-                invoice.showInvoice(facility, outFile);
-                invoice.showInvoice(motorcycle, outFile);
+                invoice.showInvoice();
+                invoice.showInvoice(facility);
+                invoice.showInvoice(motorcycle);
             }
         }
-        
-        inFile.close();
-        outFile.close();
         
         return 0;
 }
