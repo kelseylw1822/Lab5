@@ -66,7 +66,7 @@ void Invoice::showInvoice(Car& car) {
     cout << "Manufacturer: " << car.getManufacturer() << endl;
     cout << "Model Number: " << car.getModel() << endl;
     cout << "Model Year: " << car.getYear() << endl;
-    cout << "Engine Size: " << car.getEngineSize() << endl;
+    cout << "Engine Size: " << car.getEngineSize() << " cc" << endl;
     cout << "Vehicle Color: " << car.getColor() << endl;
 }
 
@@ -76,6 +76,6 @@ void Invoice::showInvoice(Motorcycle& motorcycle) {
     cout << "Manufacturer: " << motorcycle.getManufacturer() << endl;
     cout << "Model Number: " << motorcycle.getModel() << endl;
     cout << "Model Year: " << motorcycle.getYear() << endl;
-    cout << "Engine Size: " << motorcycle.getEngineSize() << endl;
+    cout << "Engine Size: " << motorcycle.getEngineSize() << " cc" << endl;
     cout << "Vehicle Color: " << motorcycle.getColor() << endl;
 }

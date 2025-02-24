@@ -34,12 +34,12 @@ int main()
             Invoice invoice;
             invoice.setPrice(75);
             invoice.setDiscount(25);  // Set the discount for students
-            invoice.setServiceCharges(15);  // Set service charges
 
             if (input[6] == "1")  // vehicle is a car
             {
                 // Create the car object using input data
                 Car car(input[7], input[8], input[9], input[10], input[11]);
+                invoice.setServiceCharges(15);  // Set service charges
 
                 // Show the invoice details for the student and car
                 invoice.showInvoice();
@@ -64,11 +64,11 @@ int main()
             // Create a new Invoice for the facility
             Invoice invoice;
             invoice.setPrice(75);  // Set the base price
-            invoice.setServiceCharges(15);  // Set service charges
 
             if (input[6] == "1")  // vehicle is a car
             {
                 Car car(input[7], input[8], input[9], input[10], input[11]);
+                invoice.setServiceCharges(15);  // Set service charges
 
                 // Show the invoice details for the facility and car
                 invoice.showInvoice();
